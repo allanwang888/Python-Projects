@@ -1,0 +1,63 @@
+
+
+import matplotlib.pyplot as plt
+
+
+def calculate_download_time(file_size_mb, speed_mbps):
+
+    file_size_bits = file_size_mb * 8 #Since 1MB = 8 Megabits
+
+    download_time = file_size_bits / speed_mbps
+    return download_time
+
+
+
+file_size_mb = float(input("Enter file size in MB: "))
+
+speed_4g = float(input("Enter 4G speed in Mbps: "))
+speed_5g = float(input("Enter 5G speed in Mbps: "))
+speed_6g = float(input("Enter 6G speed in Mbps: "))
+
+
+download_time_4g = calculate_download_time(file_size_mb, speed_4g)
+download_time_5g = calculate_download_time(file_size_mb, speed_5g)
+download_time_6g = calculate_download_time(file_size_mb, speed_6g)
+
+
+print("\nDownload Time Simulation (for a file of", file_size_mb, "MB):")
+print(f"4G - Download Time: {download_time_4g:.2f} seconds")
+print(f"5G - Download Time: {download_time_5g:.2f} seconds")
+print(f"6G - Download Time: {download_time_6g:.2f} seconds")
+
+
+generations = ['4G','5G','6G']
+download_times = [download_time_4g,download_time_5g,download_time_6g]
+
+plt.bar(generations, download_times, color = ['red', 'blue', 'green'])
+
+plt.xlabel('Network Generation')
+plt.ylabel('Download Time (seconds)')
+plt.title('Download Time Comparison for Different Generations')
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
