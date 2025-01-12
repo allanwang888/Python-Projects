@@ -1,0 +1,47 @@
+# Thanks for using it!
+
+
+
+from googletrans import Translator
+translator = Translator()
+
+
+def translate_sentence():
+
+    sentence = input("Enter the sentence you want to translate: ")
+
+    source_lang = input("Enter the source language code (eg., 'en' for English, 'es' for Spanish, etc.): ")
+    target_lang = input("Enter the target language code (eg., 'en' for English, 'es' for Spanish, etc.): ")
+
+
+    translation = translator.translate(sentence, src = source_lang, dest = target_lang)
+
+    print(f"Translation from {source_lang} to {target_lang}: {translation.text}")
+    
+
+
+def main():
+    print("--- welcome to the Dynamic Translation System ---")
+
+    while True:
+        print("\nOptions: ")
+        print("1. Translate a sentence")
+        print("2. Exit")
+
+        choice = input("Enter your choice (1 or 2): ").strip()
+
+        if choice == '1':
+            translate_sentence()
+        elif choice == '2':
+            print("Exiting the translation system.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+            
+
+main()
+
+
+
+
