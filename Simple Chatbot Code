@@ -1,12 +1,12 @@
-# Simple Chatbot AI using Python
+# Cool Chatbot AI using Python
 
 # Define responses
 responses = {
-    "hello": "Hi there! How can I help you?",
-    "how are you": "I'm just a bunch of code, but I'm doing great! How about you?",
-    "what is your name": "I am ChatBot, your virtual assistant!",
-    "bye": "Goodbye! Have a great day!",
-    "default": "I'm sorry, I don't understand that. Can you try rephrasing?"
+    "hello": "Fine",
+    "how are you": "Fine",
+    "what is your name": "Fine",
+    "bye": "Fine",
+    "default": "Fine"
 }
 
 # Function to get response
@@ -24,14 +24,14 @@ def get_response(user_input):
 
 # Main program loop
 def chatbot():
-    print("ChatBot: Hello! Type 'bye' to exit.")
+    print("Prof. Hinsley: ")
     while True:
         user_input = input("You: ")  # Get user input
         if user_input.lower() == "bye":
-            print("ChatBot:", responses["bye"])
+            print("Prof. Hinsley:", responses["bye"])
             break
         response = get_response(user_input)
-        print("ChatBot:", response)
+        print("Prof. Hinsley:", response)
 
 # Run the chatbot
 if __name__ == "__main__":
